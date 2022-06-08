@@ -1,16 +1,20 @@
 import React from 'react'
 
 
-function Navbar(params) {
+function Navbar(props) {
+    
     return(
-        <div>
-            <nav>
+        <div className='nav-container'>
+            <nav className='navbar'>
                 <div>
-                <h1>Movies</h1>
+                <h2> Movies</h2>
                 </div>
                 <div>
-                <h1>Characters</h1>
+                   <h2> News </h2>
                 </div>
+                <div>
+                    <h2>Fun Facts</h2>
+                </div>            
             </nav>
         </div>
     )

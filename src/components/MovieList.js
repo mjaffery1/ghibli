@@ -1,10 +1,23 @@
 import React from 'react'
 
-function MovieList(params) {
 
+function MovieList(props) {
+const movieData = props.data;
+
+const movies = props.data.map((movie, index) => {
     return(
         <div>
-            Movie List
+        {movie.title}
+        </div>
+    
+    )
+})
+    return(
+        
+        <div>
+        {/* <ul>{movies} </ul> */}
+        
+        
         </div>
     )
     
