@@ -51,5 +51,4 @@ function App() {
 
 export default App;
 
-//make posters clickable and take you to specific movie details page
-//create routes
+
