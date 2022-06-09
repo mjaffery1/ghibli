@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function MovieCard({ movie }) {
-  console.log(movie);
   if (!movie) {
     return;
   }
