@@ -6,63 +6,57 @@ import MovieDetails from "./components/MovieDetails";
 import Header from "./components/Header";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
+import { Route, Routes } from "react-router-dom";
+import FunFacts from "./components/FunFacts";
 
-
-const API = 'https://ghibliapi.herokuapp.com/films/'
+const API = "https://ghibliapi.herokuapp.com/films/";
 
 function App() {
-  const [movieCards, setMovieCards] = useState([])
-  
-const searchMovies = async (id) => {
-  const movies = await axios.get(`${API}`)
-  const movie = await movies.json
+  // const [movieCards, setMovieCards] = useState([]);
 
-  // console.log(movie)
-};
+  const searchMovies = async (id) => {
+    const movies = await axios.get(`${API}`);
+    const movie = await movies.json;
 
-useEffect(() => {
-  searchMovies();
-  
-}, []);
+  };
+
+  useEffect(() => {
+    searchMovies();
+  }, []);
 
   const [movieData, setMovieData] = useState([]);
-
-  
 
   useEffect(() => {
     const getData = async () => {
       const { data } = await axios.get(`https://ghibliapi.herokuapp.com/films`);
-      setMovieData(data);};
+      setMovieData(data);
+    };
     getData();
   }, []);
 
   return (
-  
     <div className="App">
-    <div>
-      <Header />
+      <div>
+        <Header />
+      
+        <Navbar data={movieData} />
+      </div>
+
+      <Routes>
+
+        <Route path="/funfacts" element={<FunFacts  /> }/>
+        <Route path="/movies" element={<MovieList data={movieData} /> }/>
+        <Route path="/movie/:title" element={<MovieDetails data={movieData} /> }/>
+      </Routes>
+
+       
+
+
     </div>
-      <div>
-        <Navbar data={movieData}/>
-      </div>
-      <div>
-        <MovieList data={movieData} />
-      </div>
-      <div>
-        {movieData.map((movie) => (
-          <MovieCard movieData={movieData} movie={movie} key={movie.title}/>
-          
-        ))}
-      </div>
-      <div>
-      {movieData.map((movie) => (
-      <MovieDetails movie={movie} key={movie.id}/>
-      ))}
-      </div>
-    </div>
-    
   );
 }
 
 export default App;
+
+//make posters clickable and take you to specific movie details page
+//create routes 

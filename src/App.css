@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  background: #654ea3;
+  background: linear-gradient(to right, #eaafc8, #654ea3);
+  width: 100%;
+  
 }
 
 .App-logo {
@@ -13,29 +17,6 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 .navbar{
   display: flex;
   flex-direction: row;
@@ -46,12 +27,55 @@
 .details-container{
   border: solid black 10px;
   margin: 10px;
+  color: white;
+  font-size: large;
+  text-decoration: wavy;
+  
 }
 
 .header-image{
   border: solid black 10px;
   display:flex;
-  height:600px;
-  width: 600px;
+  height:400px;
+  width: 97.5%;
 
 }
+.card-container{
+  margin: 20px;
+  /* border: solid black 10px; */
+  width: 320px;
+  height: 320px;
+  margin-bottom: 30px;
+  transition:
+    0.7s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    box-shadow 0.7s;
+}
+.movie-poster{
+  height: 300px;
+  width:200px;
+  border: solid black 1px;
+  border-radius: 10px;
+
+  transition:
+    0.7s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    box-shadow 0.7s;
+}
+a{
+  text-decoration: none;
+  font-size: large;
+  text-emphasis: bold;
+}
+.facts{
+  list-style: none;
+  padding: 10px;
+  text-align: center;
+}
+.ast{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+

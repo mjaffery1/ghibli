@@ -1,25 +1,28 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 
 function MovieDetails(props) {
+    
+
+    const {title} = useParams()
+    const movie = props.data.find(mov => mov.original_title === title)
+    console.log(movie)
     return(
         <div className='details-container'>
             <div>
-                Movie Description: {props.movie.description}
+                Movie Description: {movie && movie.description}
             </div>
             <div>
-                Director: {props.movie.director}
+                Director: {movie && movie.director}
             </div>
             <div>
-                Release Year:{props.movie.release_date}
+                Release Year:{movie && movie.release_date}
             </div>
             <div>
-               Movie Title: {props.movie.title}
+               Movie Title: {movie && movie.title}
             </div>
             <div>
-                Original Title: {props.movie.original_title_romanised}
-            </div>
-            <div>
-                Characters: <a href={props.movie.people}></a> 
+                Original Title: {movie && movie.original_title_romanised}
             </div>
         </div>
     )

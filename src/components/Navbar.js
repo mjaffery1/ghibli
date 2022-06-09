@@ -7,10 +7,10 @@ function Navbar(props) {
         <div className='nav-container'>
             <nav className='navbar'>
                 <div>
-                <h2> Movies</h2>
+                <h2> Home</h2>
                 </div>
                 <div>
-                   <h2> News </h2>
+                   <a href='https://www.ghiblifest.com/'> Watch Studio Ghibli in Theaters! </a>
                 </div>
                 <div>
                     <h2>Fun Facts</h2>
