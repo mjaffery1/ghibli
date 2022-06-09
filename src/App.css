@@ -1,20 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@700&display=swap');
+
+html{
+  background: #654ea3;
+  background: linear-gradient(to right #654ea3);
+
+}
 .App {
   text-align: center;
   background: #654ea3;
   background: linear-gradient(to right, #eaafc8, #654ea3);
-  width: 100%;
+  width: 100vw;
+
   
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .navbar{
@@ -25,19 +22,42 @@
 }
 
 .details-container{
-  border: solid black 10px;
   margin: 10px;
   color: white;
   font-size: large;
   text-decoration: wavy;
-  
+  background: rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
+
+.test {
+  /* border: white 1px solid; */
+  gap: 10px;
+}
+
+
+
+.moviebanner:hover {
+    transition-timing-function: ease-in-out;
+    -moz-box-shadow: 20px 20px 0 0 rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 20px 20px 0 0 rgba(0, 0, 0, 0.8);
+    box-shadow: 20px 20px 0 0 rgba(0, 0, 0, 0.8);
+    transform: scale(1.03);
+  }
+
+
 
 .header-image{
   border: solid black 10px;
   display:flex;
-  height:400px;
-  width: 97.5%;
+  height:81vh;
+  width: 100%;
 
 }
 .card-container{
@@ -71,6 +91,8 @@ a{
   list-style: none;
   padding: 10px;
   text-align: center;
+  margin-bottom: 10px;
+  font-family: 'Amaranth', sans-serif;
 }
 .ast{
   display: flex;
@@ -78,4 +100,37 @@ a{
   flex-wrap: wrap;
   justify-content: center;
 }
+.funfacts{
+/* border: white solid 10px; */
+font-family: 'Amaranth', sans-serif;
+font-size: larger;
+}
+.fact{
+  margin:10px;
+  padding: 10px;
+}
+.moviebanner{
+  height:300px;
+  width:300px;
+}
 
+
+.movieinfo {
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin: 10px;
+  padding:10px;
+}
+
+.movieinfo:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.movieinfo p {
+  margin: 0.3rem 1rem 0.3rem 1rem;
+  font-size: 1.2rem;
+  font-family: 'Amaranth', sans-serif;
+  font-size: 2rem;
+}

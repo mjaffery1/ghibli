@@ -44,9 +44,9 @@ function App() {
 
       <Routes>
 
-        <Route path="/funfacts" element={<FunFacts  /> }/>
-        <Route path="/movies" element={<MovieList data={movieData} /> }/>
+        <Route path="/" element={<MovieList data={movieData} /> }/>
         <Route path="/movie/:title" element={<MovieDetails data={movieData} /> }/>
+        <Route path="/funfacts" element={<FunFacts  /> }/>
       </Routes>
 
        
