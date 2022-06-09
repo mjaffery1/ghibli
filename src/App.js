@@ -1,6 +1,5 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-import MovieCard from "./components/ MovieCard";
 import MovieList from "./components/MovieList";
 import MovieDetails from "./components/MovieDetails";
 import Header from "./components/Header";
@@ -12,12 +11,8 @@ import FunFacts from "./components/FunFacts";
 const API = "https://ghibliapi.herokuapp.com/films/";
 
 function App() {
-  // const [movieCards, setMovieCards] = useState([]);
-
   const searchMovies = async (id) => {
     const movies = await axios.get(`${API}`);
-    const movie = await movies.json;
-
   };
 
   useEffect(() => {
@@ -38,20 +33,18 @@ function App() {
     <div className="App">
       <div>
         <Header />
-      
+
         <Navbar data={movieData} />
       </div>
 
       <Routes>
-
-        <Route path="/" element={<MovieList data={movieData} /> }/>
-        <Route path="/movie/:title" element={<MovieDetails data={movieData} /> }/>
-        <Route path="/funfacts" element={<FunFacts  /> }/>
+        <Route path="/" element={<MovieList data={movieData} />} />
+        <Route
+          path="/movie/:title"
+          element={<MovieDetails data={movieData} />}
+        />
+        <Route path="/funfacts" element={<FunFacts />} />
       </Routes>
-
-       
-
-
     </div>
   );
 }
@@ -59,4 +52,4 @@ function App() {
 export default App;
 
 //make posters clickable and take you to specific movie details page
-//create routes 
+//create routes

@@ -13,7 +13,6 @@ function MovieDetails(props) {
         alt="movie banner"
       />
       <div className="test">
-       
         <div className="movieinfo">Director: {movie && movie.director}</div>
         <div className="movieinfo">
           Release Year: {movie && movie.release_date}
