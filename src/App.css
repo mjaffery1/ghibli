@@ -43,7 +43,7 @@ html{
 
 
 
-.moviebanner:hover {
+.movie-banner:hover {
     transition-timing-function: ease-in-out;
     -moz-box-shadow: 20px 20px 0 0 rgba(0, 0, 0, 0.8);
     -webkit-box-shadow: 20px 20px 0 0 rgba(0, 0, 0, 0.8);
@@ -100,7 +100,7 @@ a{
   flex-wrap: wrap;
   justify-content: center;
 }
-.funfacts{
+.fun-facts{
 /* border: white solid 10px; */
 font-family: 'Amaranth', sans-serif;
 font-size: larger;
@@ -109,13 +109,13 @@ font-size: larger;
   margin:10px;
   padding: 10px;
 }
-.moviebanner{
+.movie-banner{
   height:300px;
   width:300px;
 }
 
 
-.movieinfo {
+.movie-info {
   width: 50vw;
   display: flex;
   justify-content: space-between;
@@ -124,11 +124,11 @@ font-size: larger;
   padding:10px;
 }
 
-.movieinfo:hover {
+.movie-info:hover {
   background: rgba(0, 0, 0, 0.4);
 }
 
-.movieinfo p {
+.movie-info p {
   margin: 0.3rem 1rem 0.3rem 1rem;
   font-size: 1.2rem;
   font-family: 'Amaranth', sans-serif;

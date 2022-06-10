@@ -2,7 +2,7 @@ import React from "react";
 
 const FunFacts = () => {
   return (
-    <div className="funfacts">
+    <div className="fun-facts">
       <ul className="facts">
         <div className="fact">
           <li>

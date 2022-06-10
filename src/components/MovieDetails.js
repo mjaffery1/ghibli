@@ -7,20 +7,20 @@ function MovieDetails(props) {
   return (
     <div className="details-container">
       <img
-        className="moviebanner"
+        className="movie-banner"
         src={movie.movie_banner}
         alt="movie banner"
       />
       <div className="test">
-        <div className="movieinfo">Director: {movie && movie.director}</div>
-        <div className="movieinfo">
+        <div className="movie-info">Director: {movie && movie.director}</div>
+        <div className="movie-info">
           Release Year: {movie && movie.release_date}
         </div>
-        <div className="movieinfo">Movie Title: {movie && movie.title}</div>
-        <div className="movieinfo">
+        <div className="movie-info">Movie Title: {movie && movie.title}</div>
+        <div className="movie-info">
           Original Title: {movie && movie.original_title_romanised}
         </div>
-        <div className="movieinfo">
+        <div className="movie-info">
           Movie Description: {movie && movie.description}
         </div>
       </div>

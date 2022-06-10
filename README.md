@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+**Project Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Project Description
 
-## Available Scripts
+This app is a Studio Ghibli fan site and shows all the movies by the studio as well as details about each movie.
 
-In the project directory, you can run:
+**Project Links**
 
-### `npm start`
+https://github.com/mjaffery1/ghibli
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+https://ghibli-sultan.netlify.app/
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Wireframes**
 
-### `npm test`
+https://media.git.generalassemb.ly/user/42761/files/441aef99-25e0-44a3-9099-ea38aa15bd9e
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**MVP EXAMPLE**
 
-### `npm run build`
+Find and use external api
+Render data on page
+Show all movies from API and also create cards that lead to page about specific movie.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**PostMVP EXAMPLE**
+Use MUI for styling purposes
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Component	Description**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+App	This will make the initial data pull and include React Router
+Header	This will render the header include the nav
+Navbar This will include routes to go to the home page and the fun facts page. Also a link that takes you to an external site to buy movie tickets.
+MovieCard This will render each movie card showing the movie poster of each movie.
+MovieDetails This includes movie information pulled from the API such as Director, Release Year, Movie Description etc.
+FunFacts This includes fun facts about Studio Ghibli
 
-### `npm run eject`
+**Additional Libraries**
+Axios
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Code Snippet**
+<Route path = "/movie/:title" element = {<MovieDetails data={movieData} />} />
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+function MovieDetails(props) {
+  const { title } = useParams();
+  const movie = props.data.find((mov) => mov.original_title === title);
+  
+//This code snippet allows me to use Japanese original title of movie as the path/route in my url.
