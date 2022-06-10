@@ -14,6 +14,10 @@ https://ghibli-sultan.netlify.app/
 
 https://media.git.generalassemb.ly/user/42761/files/441aef99-25e0-44a3-9099-ea38aa15bd9e
 
+**Screenshot of App**
+<img width="1440" alt="Screen Shot 2022-06-09 at 10 32 12 PM" src="https://user-images.githubusercontent.com/99685970/173077063-17351008-72c5-4110-8dbb-3e0182365131.png">
+
+
 **MVP EXAMPLE**
 
 Find and use external api
