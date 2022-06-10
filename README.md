@@ -26,6 +26,7 @@ Render data on page
 Show all movies from API and also create cards that lead to page about specific movie.
 
 **PostMVP EXAMPLE**
+
 Use MUI for styling purposes
 
 **Component	Description**
@@ -41,6 +42,7 @@ FunFacts This includes fun facts about Studio Ghibli
 Axios
 
 **Code Snippet**
+
 <Route path = "/movie/:title" element = {<MovieDetails data={movieData} />} />
 
 function MovieDetails(props) {
