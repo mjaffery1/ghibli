@@ -1,6 +1,6 @@
-**Project Overview
+**Project Overview**
 
-**Project Description
+**Project Description**
 
 This app is a Studio Ghibli fan site and shows all the movies by the studio as well as details about each movie.
 
